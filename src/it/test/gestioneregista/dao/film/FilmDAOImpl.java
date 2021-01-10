@@ -17,7 +17,7 @@ public class FilmDAOImpl implements FilmDAO {
 	
 	@Override
 	public List<Film> list() throws Exception {
-		return entityManager.createQuery("from film", Film.class).getResultList();
+		return entityManager.createQuery("from Film", Film.class).getResultList();
 	}
 
 	@Override
@@ -52,9 +52,9 @@ public class FilmDAOImpl implements FilmDAO {
 	}
 
 	@Override
-	public List<Film> findAllByTitolo(String titolo) throws Exception {
+	public List<Film> findAllByTitoloConIniziale(String inizialeTitolo) throws Exception {
 		TypedQuery<Film> query = entityManager.createQuery("from Film f where f.titolo like ?1", Film.class);
-		return query.setParameter(1, titolo).getResultList();
+		return query.setParameter(1, inizialeTitolo + '%').getResultList();
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class FilmDAOImpl implements FilmDAO {
 	}
 
 	@Override
-	public List<Film> findAllByCognomeRegista(String cognomeRegistaInput) throws Exception {
+	public List<Film> findAllByCognomeRegistaConIniziale(String cognomeRegistaInput) throws Exception {
 		TypedQuery<Film> query = entityManager.createQuery("from Film f left join fetch f.regista where cognome like ?1", Film.class);
 		return query.setParameter(1, cognomeRegistaInput + '%').getResultList();
 	}

@@ -3,6 +3,7 @@ package it.test.gestioneregista.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -25,7 +26,7 @@ public class Regista {
 	private String cognome;
 	@Column(name = "oscarvinti")
 	private Integer oscarVinti;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "regista")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "regista")
 	private Set<Film> films = new HashSet<>();
 	
 	public Regista() {

@@ -7,10 +7,10 @@ import it.test.gestioneregista.model.Film;
 
 public interface FilmDAO extends IBaseDAO<Film> {
 	
-	public List<Film> findAllByTitolo(String titolo) throws Exception;
+	public List<Film> findAllByTitoloConIniziale(String titolo) throws Exception;
 	
 	public List<Film> findAllByGenere(String genereInput) throws Exception;
 	
-	public List<Film> findAllByCognomeRegista(String cognomeRegistaInput) throws Exception;
+	public List<Film> findAllByCognomeRegistaConIniziale(String cognomeRegistaInput) throws Exception;
 	
 }

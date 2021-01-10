@@ -106,13 +106,13 @@ public class FilmServiceImpl implements FilmService{
 	}
 
 	@Override
-	public List<Film> cercaTuttiIFilmConTitolo(String titolo) throws Exception {
+	public List<Film> cercaTuttiIFilmConTitoloCheIniziaPer(String titolo) throws Exception {
 				EntityManager entityManager = EntityManagerUtil.getEntityManager();
 
 				try {
 					filmDAO.setEntityManager(entityManager);
 
-					return filmDAO.findAllByTitolo(titolo);
+					return filmDAO.findAllByTitoloConIniziale(titolo);
 				} catch (Exception e) {
 					e.printStackTrace();
 					throw e;
@@ -138,13 +138,13 @@ public class FilmServiceImpl implements FilmService{
 	}
 
 	@Override
-	public List<Film> cercaTuttiIFilmConCognomeRegista(String cognomeRegistaInput) throws Exception {
+	public List<Film> cercaTuttiIFilmConCognomeRegistaConIniziale(String cognomeRegistaInput) throws Exception {
 		EntityManager entityManager = EntityManagerUtil.getEntityManager();
 
 		try {
 			filmDAO.setEntityManager(entityManager);
 
-			return filmDAO.findAllByCognomeRegista(cognomeRegistaInput);
+			return filmDAO.findAllByCognomeRegistaConIniziale(cognomeRegistaInput);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;

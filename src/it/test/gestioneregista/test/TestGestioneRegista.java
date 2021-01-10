@@ -46,7 +46,21 @@ public class TestGestioneRegista {
 //					System.out.println("Cancellazione fallita!!!");
 //			}
 			
+			// DELETE REGISTA
+//			System.out.println("============ DELETE REGISTA =====================");
+//			long idRegistaDb = 8;
+//			Regista registaDb2 = registaService.caricaSingoloRegista(idRegistaDb);
+//			if (registaDb2 != null) {
+//				registaService.rimuovi(registaDb2);
+//				registaDb2 = registaService.caricaSingoloRegista(idRegistaDb);
+//				if (registaDb2 == null)
+//					System.out.println("Cancellazione ok");
+//				else
+//					System.out.println("Cancellazione fallita!!!");
+//			}
+			
 			// update regista
+//			System.out.println("============ UPDATE REGISTA =====================");
 //			List<Regista> listaRegista = registaService.cercaRegistaConInizialeNome("S");
 //			for (Regista registaItem : listaRegista) {
 //				System.out.println(registaItem);
@@ -60,29 +74,55 @@ public class TestGestioneRegista {
 //				
 //				System.out.println(" \n carico regista con id: "+registaDb.getId() + "\n");
 //				System.out.println(registaService.caricaSingoloRegista(registaDb.getId()));
+//			}	
+			
+			// update films
+//			System.out.println("============ UPDATE FILMS =====================");
+//			List<Film> listaFilm = filmService.cercaTuttiIFilmConTitoloCheIniziaPer("S");
+//			for (Film filmItem : listaFilm) {
+//				System.out.println(filmItem);
+//			}
+//			
+//			if(!listaFilm.isEmpty()) {
+//				Film filmDb = listaFilm.get(0);
+//				System.out.println(" \n main before setDurata +10:" + filmDb);
+//				filmDb.setDurata(filmDb.getDurata()+10);
+//				filmService.aggiorna(filmDb);
+//				
+//				System.out.println(" \n carico film con id: "+filmDb.getId() + "\n");
+//				System.out.println(filmService.caricaSingoloFilm(filmDb.getId()));
 //			}			
 
-//			// elencare i registi
+//			// elenco registi
 //			System.out.println("Elenco i registi:");
 //			for (Regista registaItem : registaService.listAllRegisti()) {
 //				System.out.println(registaItem);
 //			}
+			
+//			// elenco film
+//			System.out.println("Elenco i film:");
+//			for (Film filmItem : filmService.listAllFilms()) {
+//				System.out.println(filmItem);
+//			}
 //
-//			// elenca tutti i registi con iniziale nome
+//			// elenco tutti i registi con iniziale nome
 //			System.out.println("Ecco i registi con iniziale nome selezionata ");
 //			String iniziale = "S";
 //			for (Regista registaItem : registaService.cercaRegistaConInizialeNome(iniziale)) {
 //				System.out.println(registaItem);
 //			}
 			
-			// elenca regista con più oscar
-			System.out.println("Ecco il miglior regista: ");
-			Regista migliorRegista = registaService.registaConPiuOscarVinti();
-				System.out.println(migliorRegista);
+//			// elenco tutti i film con iniziale titolo
+//			System.out.println("Ecco i film con iniziale titolo selezionata ");
+//			String iniziale = "V";
+//			for (Film filmItem : filmService.cercaTuttiIFilmConTitoloCheIniziaPer(iniziale)) {
+//				System.out.println(filmItem);
+//			}
 			
-
-			
-			
+			// regista con più oscar
+//			System.out.println("Ecco il miglior regista: ");
+//			Regista migliorRegista = registaService.registaConPiuOscarVinti();
+//			System.out.println(migliorRegista);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

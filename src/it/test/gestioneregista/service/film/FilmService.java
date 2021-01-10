@@ -17,11 +17,11 @@ public interface FilmService {
 
 	public void rimuovi(Film filmInstance) throws Exception;
 	
-	public List<Film> cercaTuttiIFilmConTitolo(String titolo) throws Exception;
+	public List<Film> cercaTuttiIFilmConTitoloCheIniziaPer(String titolo) throws Exception;
 
 	public List<Film> cercaTuttiIFilmConGenere(String genereInput) throws Exception;
 	
-	public List<Film> cercaTuttiIFilmConCognomeRegista(String cognomeRegistaInput) throws Exception;
+	public List<Film> cercaTuttiIFilmConCognomeRegistaConIniziale(String cognomeRegistaInput) throws Exception;
 	
 	//per injection
 	public void setFilmDAO(FilmDAO filmDAO);

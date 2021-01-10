@@ -27,7 +27,6 @@ public class Regista {
 	private Integer oscarVinti;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "regista")
 	private Set<Film> films = new HashSet<>();
-
 	
 	public Regista() {
 		

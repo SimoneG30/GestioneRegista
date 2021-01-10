@@ -11,5 +11,5 @@ public interface RegistaDAO extends IBaseDAO<Regista> {
 
 	public List<Regista> findAllByIniziali(String inizialeInput) throws Exception;
 	
-	public Regista registaConPiuOscarVinti() throws Exception;
+	public Regista findByOscarVinti() throws Exception;
 }

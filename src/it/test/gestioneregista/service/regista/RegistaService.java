@@ -2,6 +2,7 @@ package it.test.gestioneregista.service.regista;
 
 import java.util.List;
 
+import it.test.gestioneregista.dao.regista.RegistaDAO;
 import it.test.gestioneregista.model.Regista;
 
 public interface RegistaService {
@@ -15,4 +16,13 @@ public interface RegistaService {
 	public void inserisciNuovo(Regista registaInstance) throws Exception;
 
 	public void rimuovi(Regista registaInstance) throws Exception;
+	
+	public Regista caricaSingoloRegistaConFilms(Long id) throws Exception;
+
+	public List<Regista> cercaRegistaConInizialeNome(String inizialeInput) throws Exception;
+	
+	public Regista registaConPiuOscarVinti() throws Exception;
+	
+	//per injection
+		public void setRegistaDAO(RegistaDAO registaDAO);
 }

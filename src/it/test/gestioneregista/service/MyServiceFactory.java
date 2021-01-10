@@ -2,7 +2,9 @@ package it.test.gestioneregista.service;
 
 import it.test.gestioneregista.dao.MyDaoFactory;
 import it.test.gestioneregista.service.film.FilmService;
+import it.test.gestioneregista.service.film.FilmServiceImpl;
 import it.test.gestioneregista.service.regista.RegistaService;
+import it.test.gestioneregista.service.regista.RegistaServiceImpl;
 
 public class MyServiceFactory {
 

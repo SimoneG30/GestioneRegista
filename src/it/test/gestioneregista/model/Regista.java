@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "film")
+@Table(name = "regista")
 public class Regista {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -81,6 +81,6 @@ public class Regista {
 
 	@Override
 	public String toString() {
-		return "Film [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", oscar vinti=" + oscarVinti + "]";
+		return "Regista [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", oscar vinti=" + oscarVinti + "]";
 	}
 }

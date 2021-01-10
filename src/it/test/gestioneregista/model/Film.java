@@ -24,11 +24,18 @@ public class Film {
 	@Column(name = "durata")
 	private Integer durata;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "municipio_id")
+	@JoinColumn(name = "regista_id")
 	private Regista regista;
 	
 	public Film() {
 		
+	}
+
+	public Film(String titolo, String genere, Integer durata) {
+		super();
+		this.titolo = titolo;
+		this.genere = genere;
+		this.durata = durata;
 	}
 
 	public Long getId() {
